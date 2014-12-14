@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  width: 950px;
+}
+
+.page-title {
+  background-color: grey;
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+.content {
+ border: 1px solid grey;
+}
