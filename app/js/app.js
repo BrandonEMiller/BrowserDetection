@@ -1,6 +1,9 @@
 $(document).ready(function() {
-  var browserName = detectBrowser();
-  var operatingSystem = detectOS();
+  var ua = navigator.userAgent;
+  console.log(ua);
+
+  var browserName = detectBrowser(ua);
+  var operatingSystem = detectOS(ua);
   var screenWidth = detectScreenWidth();
   var screenHeight = detectScreenHeight();
   var userLanguage = detectUserLanguage();
