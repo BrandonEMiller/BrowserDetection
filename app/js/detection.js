@@ -1,19 +1,6 @@
-$(document).ready(function() {
-
+function detectBrowser() {
   var ua = navigator.userAgent;
   console.log(ua);
-  var browserName = detectBrowser(ua);
-  var operatingSystem = detectOS(ua);
-  var screenWidth = screen.width;
-  var screenHeight = screen.height;
-  var userLanguage = navigator.language;
-  $("#browser").html(browserName);
-  $('#operatingSystem').html(operatingSystem);
-  $('#dimensions').html(screenWidth + ' x ' + screenHeight);
-  $('#language').html(userLanguage);
-});
-
-function detectBrowser(ua) {
   if(ua.indexOf('Maxthon')!= -1){
     var position = ua.indexOf("Maxthon");
     var version = ua.slice(position + 8, position + 13);
@@ -47,7 +34,8 @@ function detectBrowser(ua) {
   }
 }
 
-function detectOS(ua){
+function detectOS(){
+  var ua = navigator.userAgent;
   if(ua.indexOf('Windows') != -1) {
     return windowsOS(ua);
   }
@@ -67,4 +55,16 @@ function windowsOS(ua){
     }
     return "Windows " + windowsVersion;
   }
+}
+
+function detectScreenWidth() {
+  return screen.width;
+}
+
+function detectScreenHeight() {
+  return screen.height;
+}
+
+function detectUserLanguage() {
+  return navigator.language;S
 }
