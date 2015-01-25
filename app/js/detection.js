@@ -1,4 +1,4 @@
-var NUMBER = /[^0-9.b]/g
+var NUMBER = /[^0-9.bB]/g
 
 function detectBrowser(ua) {
   if(ua.indexOf('Maxthon')!= -1){

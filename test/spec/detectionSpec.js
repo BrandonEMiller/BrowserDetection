@@ -59,6 +59,66 @@ describe("Browser Detector should ", function(){
           browser = detectBrowser(ua);
           expect(browser).toBe("Internet Explorer 6.0")
         })
+        it("5.5b1", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 5.5b1; Mac_PowerPC)"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 5.5b1")
+        })
+        it("5.5", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 6.1; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 5.5")
+        })
+        it("5.23", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 5.23; Mac_PowerPC)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 5.23")
+        })
+        it("5.17", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 5.17; Mac_PowerPC Mac OS; en)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 5.17");
+        })
+        it("5.01", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0; YComp 5.0.2.6; MSIECrawler)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 5.01");
+        })
+        it("5.0b1", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 5.0b1; Mac_PowerPC)"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 5.0b1")
+        })
+        it("5.0", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT 6.0; Trident/4.0; InfoPath.1; SV1; .NET CLR 3.0.04506.648; .NET4.0C; .NET4.0E)"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 5.0")
+        })
+        it("4.5", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 4.5; Windows NT 5.1; .NET CLR 2.0.40607)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 4.5");
+        })
+        it("4.0", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 4.0; Windows 95; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 4.0");
+        })
+        it("3.0B", function(){
+          var ua = "Mozilla/2.0 (compatible; MSIE 3.0B; Windows NT)"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 3.0B");
+        })
+        it("3.0", function(){
+          var ua = "Mozilla/3.0 (compatible; MSIE 3.0; Windows NT 5.0)"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 3.0");
+        })
+        it("2.0", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 2.0; Windows NT 5.0; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 2.0")
+        })
       })
 
       describe("Chrome ", function(){
