@@ -150,6 +150,11 @@ describe("Browser Detector should ", function(){
       })
 
       describe("Firefox ", function(){
+        it("0.10", function(){
+          var ua = "Mozilla/5.0 (X11; U; Linux i686; rv:1.7.3) Gecko/20040914 Firefox/0.10"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 0.10")
+        })
 
       })
 

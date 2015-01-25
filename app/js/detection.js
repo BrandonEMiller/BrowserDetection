@@ -23,8 +23,8 @@ function detectBrowser(ua) {
     return "Palemoon " + version;
   }
   if(ua.indexOf('Firefox')!= -1){
-    var position = ua.indexOf("rv:");
-    var version = ua.slice(position + 3, position + 7);
+    var position = ua.indexOf("Firefox/");
+    var version = ua.slice(position + 8, position + 14);
     return "Firefox " + version;
   }
   //IE 8+
