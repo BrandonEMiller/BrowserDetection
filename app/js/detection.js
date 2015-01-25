@@ -1,4 +1,4 @@
-var NUMBER = /[^0-9.abB]/g
+var NUMBER = /[^0-9.abBpre]/g
 
 function detectBrowser(ua) {
   if(ua.indexOf('Maxthon')!= -1){
@@ -25,6 +25,7 @@ function detectBrowser(ua) {
   if(ua.indexOf('Firefox')!= -1){
     var position = ua.indexOf("Firefox/");
     var version = ua.slice(position + 8, position + 20);
+    version = cleanVersion(version);
     return "Firefox " + version;
   }
   //IE 8+
@@ -45,6 +46,17 @@ function detectBrowser(ua) {
         version = version.replace(NUMBER, '');
     return "Internet Explorer " + version;
   }
+}
+
+function cleanVersion(version){
+  if(version.indexOf('(') >= 0){
+    version = version.substring(0, version.indexOf('('))
+  }
+  version = version.replace(NUMBER, '')
+  if(version[version.length - 1] === '.'){
+    version = version.substring(0, version.length -1);
+  }
+  return version;
 }
 
 function detectOS(ua){

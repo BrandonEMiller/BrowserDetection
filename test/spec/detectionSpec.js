@@ -225,6 +225,26 @@ describe("Browser Detector should ", function(){
           browser = detectBrowser(ua);
           expect(browser).toBe("Firefox 3.8")
         })
+        it("3.6.28", function(){
+          var ua = "Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.9.2.28) Gecko/20120306 AskTbSTC-SRS/3.13.1.18132 Firefox/3.6.28 (.NET CLR 3.5.30729)"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 3.6.28")
+        })
+        it("2.0.0.5", function(){
+          var ua = "Mozilla/5.0 (X11; U; Linux i686; es-ES; rv:1.8.1.5) Gecko/20070718 Fedora/2.0.0.5-1.fc7 Firefox/2.0.0.5"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 2.0.0.5")
+        })
+        it("1.0.6",function(){
+          var ua = "Mozilla/5.0 (X11; U; Linux i686; pl-PL; rv:1.7.10) Gecko/20050730 Firefox/1.0.6 (Debian package 1.0.6-2)"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 1.0.6")
+        })
+        it("0.8",function(){
+          var ua = "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.6) Gecko/20040614 Firefox/0.8"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 0.8")
+        })
         it("0.10", function(){
           var ua = "Mozilla/5.0 (X11; U; Linux i686; rv:1.7.3) Gecko/20040914 Firefox/0.10"
           browser = detectBrowser(ua);
