@@ -1,3 +1,5 @@
+var NUMBER = /[^0-9.b]/g
+
 function detectBrowser(ua) {
   if(ua.indexOf('Maxthon')!= -1){
     var position = ua.indexOf("Maxthon");
@@ -31,14 +33,16 @@ function detectBrowser(ua) {
     var version = ua.slice(position + 3, position + 7);
     if(position < 0) {
       position = ua.indexOf("MSIE");
-      version = ua.slice(position + 5, ua.indexOf("Windows") - 2);
+      version = ua.slice(position + 5, position + 10);
+      version = version.replace(NUMBER, '')
     }
     return "Internet Explorer " + version;
   }
   //IE 7 and below
   if(ua.indexOf("MSIE") != -1){
     var position = ua.indexOf("MSIE"),
-        version = ua.slice(position + 5, ua.indexOf("Windows") - 2);
+        version = ua.slice(position + 5, position + 10);
+        version = version.replace(NUMBER, '');
     return "Internet Explorer " + version;
   }
 }

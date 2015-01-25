@@ -44,6 +44,21 @@ describe("Browser Detector should ", function(){
           browser = detectBrowser(ua);
           expect(browser).toBe("Internet Explorer 6.1")
         })
+        it("6.01", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 6.01; Windows NT 6.0)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 6.01")
+        })
+        it("6.0b", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 6.0b; Windows NT 5.0; YComp 5.0.0.0) (Compatible; ; ; Trident/4.0)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 6.0b")
+        })
+        it("6.0", function(){
+          var ua = "Mozilla/4.0 (Compatible; Windows NT 5.1; MSIE 6.0) (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 6.0")
+        })
       })
 
       describe("Chrome ", function(){
