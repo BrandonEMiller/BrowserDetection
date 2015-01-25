@@ -150,6 +150,81 @@ describe("Browser Detector should ", function(){
       })
 
       describe("Firefox ", function(){
+        it("36.0", function(){
+          var ua = "Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 36.0")
+        })
+        it("33.0", function(){
+          var ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10; rv:33.0) Gecko/20100101 Firefox/33.0"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 33.0");
+        })
+        it("28.0", function(){
+          var ua = "Mozilla/5.0 (X11; OpenBSD amd64; rv:28.0) Gecko/20100101 Firefox/28.0"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 28.0");
+        })
+        it("27.3",function(){
+          var ua = "Mozilla/5.0 (Windows NT 6.1; rv:27.3) Gecko/20130101 Firefox/27.3"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 27.3");
+        })
+        it("23.0", function(){
+          var ua = "Mozilla/5.0 (Windows NT 6.2; rv:22.0) Gecko/20130405 Firefox/23.0"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 23.0")
+        })
+        it("21.0.1", function(){
+          var ua = "Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0.1) Gecko/20121011 Firefox/21.0.1"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 21.0.1")
+        })
+        it("16.0.1", function(){
+          var ua = "Mozilla/6.0 (Windows NT 6.2; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 16.0.1")
+        })
+        it("15.0a1", function(){
+          var ua = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120427 Firefox/15.0a1"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 15.0a1")
+        })
+        it("12.0", function(){
+          var ua = "Mozilla/5.0 (compatible; Windows; U; Windows NT 6.2; WOW64; en-US; rv:12.0) Gecko/20120403211507 Firefox/12.0"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 12.0")
+        })
+        it("10.0a4",function(){
+          var ua = "Mozilla/6.0 (Macintosh; I; Intel Mac OS X 11_7_9; de-LI; rv:1.9b4) Gecko/2012010317 Firefox/10.0a4"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 10.0a4")
+        })
+        it("9.0.1", function(){
+          var ua = "Mozilla/5.0 (Windows NT 6.2; rv:9.0.1) Gecko/20100101 Firefox/9.0.1"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 9.0.1")
+        })
+        it("6.0a2", function(){
+          var ua = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0a2) Gecko/20110612 Firefox/6.0a2"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 6.0a2")
+        })
+        it("5.0", function(){
+          var ua = "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 5.0")
+        })
+        it("4.0b8pre", function(){
+          var ua = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0b8pre) Gecko/20101114 Firefox/4.0b8pre"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 4.0b8pre")
+        })
+        it("3.8",function(){
+          var ua = "Mozilla/5.0 (X11; U; Linux i686; pl-PL; rv:1.9.0.2) Gecko/20121223 Ubuntu/9.25 (jaunty) Firefox/3.8"
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Firefox 3.8")
+        })
         it("0.10", function(){
           var ua = "Mozilla/5.0 (X11; U; Linux i686; rv:1.7.3) Gecko/20040914 Firefox/0.10"
           browser = detectBrowser(ua);

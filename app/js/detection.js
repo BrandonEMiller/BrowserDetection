@@ -1,4 +1,4 @@
-var NUMBER = /[^0-9.bB]/g
+var NUMBER = /[^0-9.abB]/g
 
 function detectBrowser(ua) {
   if(ua.indexOf('Maxthon')!= -1){
@@ -24,7 +24,7 @@ function detectBrowser(ua) {
   }
   if(ua.indexOf('Firefox')!= -1){
     var position = ua.indexOf("Firefox/");
-    var version = ua.slice(position + 8, position + 14);
+    var version = ua.slice(position + 8, position + 20);
     return "Firefox " + version;
   }
   //IE 8+
