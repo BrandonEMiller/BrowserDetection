@@ -39,6 +39,11 @@ describe("Browser Detector should ", function(){
               browser = detectBrowser(ua);
           expect(browser).toBe("Internet Explorer 7.0")
         })
+        it("6.1", function(){
+          var ua = "Mozilla/4.0 (compatible; MSIE 6.1; Windows XP; .NET CLR 1.1.4322; .NET CLR 2.0.50727)";
+          browser = detectBrowser(ua);
+          expect(browser).toBe("Internet Explorer 6.1")
+        })
       })
 
       describe("Chrome ", function(){
